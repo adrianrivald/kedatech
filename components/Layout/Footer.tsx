@@ -25,36 +25,26 @@ export function Footer() {
       >
         {/* Logo */}
         <div className="flex flex-col gap-4 lg:w-[20%]">
-          <Image
-            src="/assets/logo/logo-notes.png"
-            width={108}
-            height={28}
-            alt="logo-notes-footer"
-          />
+          <div className="h-full w-[200px] bg-gradient-to-b from-sky-300 to-sky-500 rounded-r-full flex items-center pl-8 py-4">
+            <span className="text-white font-bold text-3xl">ERP Now</span>
+          </div>
           <span className="text-neutral-300">ERP now</span>
           <div className="font-bold text-neutral-500">
             Sosmed
             <div className="flex items-center gap-4 mt-2">
-              {/* <Link
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FacebookRoundedIcon />
-              </Link> */}
               <Link
-                href="https://www.instagram.com/notes_idn?igsh=MTh2dHZjeGFkc252dQ=="
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Memos Instagram Acoount"
+                aria-label="ERP Now Instagram Acoount"
               >
                 <InstagramRoundedIcon />
               </Link>
               <Link
-                href="https://id.linkedin.com/company/pt-cipta-integrasi-nusantara"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Memos LinkedIn Acoount"
+                aria-label="ERP Now LinkedIn Acoount"
               >
                 <LinkedInRoundedIcon />
               </Link>
@@ -65,46 +55,27 @@ export function Footer() {
         {/* Perusahaan */}
         <div className="flex flex-col gap-4 flex-none ">
           <div className="font-bold">Perusahaan</div>
-          <Link href="/about">Tentang</Link>
+          <Link href="/">Tentang</Link>
         </div>
 
         {/* Produk */}
         <div className="flex flex-col gap-4 flex-none ">
           <div className="font-bold">Product</div>
-          <Link
-            href="https://memos.co.id"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Memos
+          <Link href="/" target="_blank" rel="noopener noreferrer">
+            Pricing
           </Link>
-          <Link
-            href="https://notes.co.id"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Notes
-          </Link>
-          <Link
-            href="https://clinix.id"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Clinix
+          <Link href="/" target="_blank" rel="noopener noreferrer">
+            Benefit
           </Link>
         </div>
 
         {/* Pengetahuan */}
         <div className="flex flex-col gap-4 flex-none ">
           <div className="font-bold">Wawasan</div>
-          <Link href="https://memos.co.id/article" target="_blank">
+          <Link href="/" target="_blank">
             Artikel
           </Link>
-          <Link
-            href="https://memos.co.id/?section=faq"
-            target="_blank"
-            className="cursor-pointer"
-          >
+          <Link href="/" target="_blank" className="cursor-pointer">
             FAQ
           </Link>
           {/* <Link href="/">{t("footer.privacy")}</Link>
@@ -116,18 +87,15 @@ export function Footer() {
           <div className="font-bold">Kontak</div>
           <div className="flex items-start gap-4">
             <PhoneIcon className="w-4 flex-none mt-1" />
-            <span>+62 851-7315-0717</span>
+            <span>+62 812-812-812</span>
           </div>
           <div className="flex items-start gap-4">
             <PinMapIcon className="w-4 flex-none mt-1" />
-            <span>
-              Jl. Seturan Raya, Kledokan, Caturtunggal, Kec. Depok, Kabupaten
-              Sleman, Daerah Istimewa Yogyakarta
-            </span>
+            <span>Jl. Thamrin no.1</span>
           </div>
           <div className="flex items-start gap-4">
             <MailIcon className="w-4 flex-none mt-1" />
-            <span>info@notes.co.id</span>
+            <span>info@erpnow.co.id</span>
           </div>
         </div>
       </div>

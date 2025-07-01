@@ -5,6 +5,7 @@ import Script from "next/script";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { Footer, Header } from "../components";
+import { ToastContainer } from "react-toastify";
 
 export function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -18,13 +19,14 @@ export function App({ Component, pageProps }: AppProps) {
         />
       </Head>
 
-      <section className="w-full mx-auto text-neutral-500">
+      <section className="w-full max-w-[120rem] mx-auto text-neutral-500">
         <Header />
         <div className="mt-[1.5rem] lg:mt-0">
           <Component {...pageProps} />
           <Footer />
         </div>
       </section>
+      <ToastContainer />
     </>
   );
 }

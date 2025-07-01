@@ -5,8 +5,17 @@ import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 import { maxWidthContainer } from "../../constants/class";
 import { Button } from "../Ui";
+import { useRouter } from "next/router";
 
 export function Hero() {
+  const router = useRouter();
+  const onConsult = () => {
+    router.push({
+      query: {
+        section: "contact",
+      },
+    });
+  };
   return (
     <div
       id="hero"
@@ -19,29 +28,21 @@ export function Hero() {
       <Fade direction="left" triggerOnce>
         <div id="our-words" className="lg:px-16 lg:max-w-[40rem]">
           <h1 className="text-[32px] font-bold text-center lg:text-left">
-            Solusi Transformasi Digital untuk Masa Depan Layanan Kesehatan yang
-            Optimal
+            Biar Sistem yang Catat, Anda Fokus Berkembang.
           </h1>
           <p className="mt-4 text-base text-center lg:text-left">
-            CRM Healthcare Solution Platform No. 1 di Indonesia yang
-            menghadirkan sistem informasi kesehatan terintegrasi untuk layanan
-            kesehatan yang lebih optimal
+            Kelola stok, pantau arus barang, dan catat keuntungan harian secara
+            otomatis dalam satu platform. Sistem ERP modern kami dirancang
+            khusus untuk membantu pengusaha mengelola operasional bisnis dengan
+            lebih efisien, tanpa perlu repot mencatat manual.
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-4 mt-8">
-            <Link href="/demo" className="w-full lg:w-auto">
-              <Button
-                title="Coba Demo Gratis"
-                isPrimary
-                className="w-full lg:w-auto"
-              />
-            </Link>
-            <a href="mailto:info@notes.co.id" className="w-full lg:w-auto">
-              <Button
-                title="Konsultasikan"
-                isPrimary={false}
-                className="w-full lg:w-auto"
-              />
-            </a>
+            <Button
+              onClick={onConsult}
+              title="Konsultasikan"
+              isPrimary
+              className="w-full lg:w-auto"
+            />
           </div>
         </div>
       </Fade>
