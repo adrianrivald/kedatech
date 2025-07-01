@@ -18,7 +18,7 @@ export function Hero() {
   };
   return (
     <div
-      id="hero"
+      id="about"
       className={twMerge(
         "flex flex-col lg:flex-row flex-col-reverse justify-between items-center min-h-[400px] gap-4 lg:gap-16 p-4 lg:p-0",
         maxWidthContainer

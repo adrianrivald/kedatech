@@ -17,6 +17,16 @@ const plans = [
     price: "99.000",
   },
   {
+    title: "TIER 2 / Business",
+    benefits: [
+      "Mencatat barang masuk dan keluar",
+      "Mencatat Keuntungan",
+      "Dapat menganalisa hasil penjualan dengan CHART",
+      "Support 7x24 Jam",
+    ],
+    price: "199.000",
+  },
+  {
     title: "TIER 3 / Entrepreneur",
     benefits: [
       "Mencatat barang masuk dan keluar",
@@ -27,16 +37,6 @@ const plans = [
       "AI Prediksi penghasilan",
     ],
     price: "499.000",
-  },
-  {
-    title: "TIER 2 / Business",
-    benefits: [
-      "Mencatat barang masuk dan keluar",
-      "Mencatat Keuntungan",
-      "Dapat menganalisa hasil penjualan dengan CHART",
-      "Support 7x24 Jam",
-    ],
-    price: "199.000",
   },
 ];
 
@@ -63,7 +63,7 @@ export function Subscribe() {
       </div>
       <div className="mt-12 flex flex-col lg:flex-row items-start  gap-16 backdrop-blur-xl rounded-xl shadows-xl p-4 lg:p-16 relative min-h-[400px] w-[100%] mx-auto space-between">
         {plans.map((plan) => (
-          <Fade direction="up" triggerOnce className="lg:w-1/3">
+          <Fade direction="up" triggerOnce className="w-full lg:w-1/3">
             <div className="bg-white p-8 rounded-[16px] text-neutral-500 border shadow-md min-h-[200px] hover:shadow-lg hover:shadow-blue-500/50 transition-all cursor-pointer">
               <div className="">
                 <h2 className="text-2xl font-bold">{plan.title}</h2>

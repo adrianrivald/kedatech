@@ -12,17 +12,15 @@ import { Login } from "../Login/Login";
 interface NavMenuMobileProps {
   isOpen: boolean;
   setOpen: Dispatch<React.SetStateAction<boolean>>;
-  onClickLogo: () => void;
-  pathname: string;
-  visible: boolean;
+  onChangeRoute: (route: string, isMobile?: boolean) => void;
+  routerSection: string;
 }
 
 function NavMenuMobile({
   isOpen,
   setOpen,
-  onClickLogo,
-  pathname,
-  visible,
+  onChangeRoute,
+  routerSection,
 }: NavMenuMobileProps) {
   return (
     <div
@@ -31,7 +29,7 @@ function NavMenuMobile({
       <header className="lg:hidden w-full bg-white shadow-md  justify-between border-neutral-300 py-4 flex items-center mx-auto max-w-[100%] px-4">
         {/* Logo */}
         <div id="logo">
-          <h1>HOME</h1>
+          <h1>ERP Now</h1>
         </div>
 
         <Hamburger
@@ -47,33 +45,43 @@ function NavMenuMobile({
         } bg-white px-4 py-4 mt-2 relative w-full`}
       >
         <nav id="menus" className="flex-col flex gap-8 text-base">
-          <Link
-            href="/"
+          <div
+            onClick={() => onChangeRoute("about", true)}
             className={`hover:text-neutral-500 cursor-pointer ${
-              pathname === "/" ? "font-bold text-neutral-500" : ""
+              routerSection === "about" ? "font-bold text-neutral-500" : ""
             }`}
           >
-            Home
-          </Link>
-          <Link
-            href="/about"
+            ABOUT
+          </div>
+          <div
+            onClick={() => onChangeRoute("pricing", true)}
             className={`hover:text-neutral-500 cursor-pointer ${
-              pathname.includes("/about") ? "font-bold text-neutral-500" : ""
+              routerSection === "pricing" ? "font-bold text-neutral-500" : ""
             }`}
           >
-            Perusahaan
-          </Link>
+            PRICING
+          </div>
+
+          <div
+            onClick={() => onChangeRoute("benefit", true)}
+            className={`hover:text-neutral-500 cursor-pointer ${
+              routerSection === "benefit" ? "font-bold text-neutral-500" : ""
+            }`}
+          >
+            BENEFIT
+          </div>
+          <div
+            onClick={() => onChangeRoute("contact", true)}
+            className={`hover:text-neutral-500 cursor-pointer ${
+              routerSection === "contact" ? "font-bold text-neutral-500" : ""
+            }`}
+          >
+            CONTACT
+          </div>
         </nav>
 
         <div className="absolute -translate-x-1/2 left-1/2 transform w-full bottom-32 flex flex-col items-center gap-4 px-4 justify-center">
-          <Link href="/" target="_blank" className="w-full">
-            <Button title="Coba Demo" isPrimary className="w-full" />
-          </Link>
-          <Button
-            title="Konsultasi"
-            isPrimary={false}
-            className="w-full lg:w-auto"
-          />
+          <Button title="Konsultasi" isPrimary className="w-full lg:w-auto" />
         </div>
       </div>
     </div>
@@ -82,10 +90,15 @@ function NavMenuMobile({
 
 interface NavMenuDesktopProps {
   onClickLogin: () => void;
+  onChangeRoute: (route: string) => void;
+  routerSection: string;
 }
 
-function NavMenuDesktop({ onClickLogin }: NavMenuDesktopProps) {
-  const router = useRouter();
+function NavMenuDesktop({
+  onClickLogin,
+  onChangeRoute,
+  routerSection,
+}: NavMenuDesktopProps) {
   return (
     <div className={`transition-all sticky z-50 top-0`}>
       <header className="h-[130px] hidden lg:flex w-full bg-white  justify-between border-neutral-300 py-4 items-center mx-auto max-w-[100%] px-16">
@@ -100,42 +113,34 @@ function NavMenuDesktop({ onClickLogin }: NavMenuDesktopProps) {
             className="hidden lg:flex items-center gap-16 text-base"
           >
             <div
-              onClick={() => router.push({ query: { section: "about" } })}
+              onClick={() => onChangeRoute("about")}
               className={`hover:text-neutral-500 cursor-pointer ${
-                router.query.section === "about"
-                  ? "font-bold text-neutral-500"
-                  : ""
+                routerSection === "about" ? "font-bold text-neutral-500" : ""
               }`}
             >
               ABOUT
             </div>
             <div
-              onClick={() => router.push({ query: { section: "pricing" } })}
+              onClick={() => onChangeRoute("pricing")}
               className={`hover:text-neutral-500 cursor-pointer ${
-                router.query.section === "pricing"
-                  ? "font-bold text-neutral-500"
-                  : ""
+                routerSection === "pricing" ? "font-bold text-neutral-500" : ""
               }`}
             >
               PRICING
             </div>
 
             <div
-              onClick={() => router.push({ query: { section: "benefit" } })}
+              onClick={() => onChangeRoute("benefit")}
               className={`hover:text-neutral-500 cursor-pointer ${
-                router.query.section === "benefit"
-                  ? "font-bold text-neutral-500"
-                  : ""
+                routerSection === "benefit" ? "font-bold text-neutral-500" : ""
               }`}
             >
               BENEFIT
             </div>
             <div
-              onClick={() => router.push({ query: { section: "contact" } })}
+              onClick={() => onChangeRoute("contact")}
               className={`hover:text-neutral-500 cursor-pointer ${
-                router.query.section === "contact"
-                  ? "font-bold text-neutral-500"
-                  : ""
+                routerSection === "contact" ? "font-bold text-neutral-500" : ""
               }`}
             >
               CONTACT
@@ -195,15 +200,33 @@ export function Header() {
   const onClickLogin = () => {
     setIsOpenLoginPopup(true);
   };
+
+  const onChangeRoute = (route: string, isMobile?: boolean) => {
+    router.push(
+      {
+        pathname: router.pathname,
+        query: { ...router.query, section: route },
+      },
+      undefined,
+      { scroll: false } // ❗️ prevent Next.js from resetting scroll
+    );
+    if (isMobile) {
+      setOpen(false);
+    }
+  };
+
   return (
     <>
-      <NavMenuDesktop onClickLogin={onClickLogin} />
+      <NavMenuDesktop
+        routerSection={router.query.section as string}
+        onChangeRoute={onChangeRoute}
+        onClickLogin={onClickLogin}
+      />
       <NavMenuMobile
-        visible={visible}
         isOpen={isOpen}
         setOpen={setOpen}
-        onClickLogo={onClickLogo}
-        pathname={pathname}
+        onChangeRoute={onChangeRoute}
+        routerSection={router.query.section as string}
       />
 
       {isOpenLoginPopup && (

@@ -28,9 +28,8 @@ export function Footer() {
           <div className="h-full w-[200px] bg-gradient-to-b from-sky-300 to-sky-500 rounded-r-full flex items-center pl-8 py-4">
             <span className="text-white font-bold text-3xl">ERP Now</span>
           </div>
-          <span className="text-neutral-300">ERP now</span>
           <div className="font-bold text-neutral-500">
-            Sosmed
+            Sosial Media
             <div className="flex items-center gap-4 mt-2">
               <Link
                 href="/"
