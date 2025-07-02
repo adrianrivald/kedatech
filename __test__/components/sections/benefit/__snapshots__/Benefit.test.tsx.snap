@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Benefit snapshot test 1`] = `
+<div
+  className="mt-8 lg:mt-32"
+  id="benefit"
+>
+  <div
+    className="mt-48 flex flex-col lg:flex-row justify-between items-center gap-16 relative"
+  >
+    <div
+      className="w-full lg:w-[40%] css-0"
+      style={
+        {
+          "animationDelay": "0ms",
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        className="flex p-4 lg:ml-36 ml-0 flex-col gap-2 items-start"
+        style={{}}
+      >
+        <h2
+          className="m-0 text-[30px] lg:text-[32px] lg:text-[40px] font-bold w-full"
+          role="benefit1heading"
+        >
+          Otomatisasi Pencatatan Barang
+        </h2>
+        <p
+          className="mt-4 lg:mt-0 m-0 text-[20px] w-full "
+          role="benefit1desc"
+        >
+          Tidak perlu lagi mencatat secara manual — semua barang masuk dan keluar tercatat otomatis & akurat.
+        </p>
+      </div>
+    </div>
+    <div
+      className="w-full lg:w-[40%] css-0"
+      style={
+        {
+          "animationDelay": "0ms",
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        className="p-24 rounded-l-full bg-primary-100"
+        style={{}}
+      >
+        <img
+          alt="benefit-1"
+          className="w-full lg:-ml-32"
+          data-nimg="1"
+          decoding="async"
+          height={408}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          role="benefit1img"
+          src="/assets/images/benefit-1.svg"
+          srcSet="/assets/images/benefit-1.svg 1x, /assets/images/benefit-1.svg 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={612}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-48 flex flex-col lg:flex-row justify-between items-center gap-16 relative"
+  >
+    <div
+      className="w-full lg:w-[40%] css-0"
+      style={
+        {
+          "animationDelay": "0ms",
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        className="flex p-4 lg:ml-36 ml-0 flex-col gap-2 items-start"
+        style={{}}
+      >
+        <h2
+          className="m-0 text-[30px] lg:text-[32px] lg:text-[40px] font-bold w-full"
+          role="benefit2heading"
+        >
+          Pantauan Keuntungan Harian
+        </h2>
+        <p
+          className="mt-4 lg:mt-0 m-0 text-[20px] w-full "
+          role="benefit2desc"
+        >
+          Lihat laporan keuntungan setiap hari secara real-time untuk memantau performa bisnis Anda dengan lebih baik.
+        </p>
+      </div>
+    </div>
+    <div
+      className="w-full lg:w-[40%] css-0"
+      style={
+        {
+          "animationDelay": "0ms",
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        className="p-24 rounded-l-full bg-primary-100"
+        style={{}}
+      >
+        <img
+          alt="benefit-2"
+          className="w-full lg:-ml-32"
+          data-nimg="1"
+          decoding="async"
+          height={408}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          role="benefit2img"
+          src="/assets/images/benefit-2.svg"
+          srcSet="/assets/images/benefit-2.svg 1x, /assets/images/benefit-2.svg 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={612}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="mt-48 flex flex-col lg:flex-row justify-between items-center gap-16 relative"
+  >
+    <div
+      className="w-full lg:w-[40%] css-0"
+      style={
+        {
+          "animationDelay": "0ms",
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        className="flex p-4 lg:ml-36 ml-0 flex-col gap-2 items-start"
+        style={{}}
+      >
+        <h2
+          className="m-0 text-[30px] lg:text-[32px] lg:text-[40px] font-bold w-full"
+          role="benefit3heading"
+        >
+          Pengambilan Keputusan Lebih Cepat
+           
+        </h2>
+        <p
+          className="mt-4 lg:mt-0 m-0 text-[20px] w-full "
+          role="benefit3desc"
+        >
+          Dengan data yang tersaji lengkap dan rapi, Anda dapat mengambil keputusan strategis tanpa ragu.
+        </p>
+      </div>
+    </div>
+    <div
+      className="w-full lg:w-[40%] css-0"
+      style={
+        {
+          "animationDelay": "0ms",
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        className="p-24 rounded-l-full bg-primary-100"
+        style={{}}
+      >
+        <img
+          alt="benefit-3"
+          className="w-full lg:-ml-32"
+          data-nimg="1"
+          decoding="async"
+          height={282}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          role="benefit3img"
+          src="/assets/images/benefit-3.svg"
+          srcSet="/assets/images/benefit-3.svg 1x, /assets/images/benefit-3.svg 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={648}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

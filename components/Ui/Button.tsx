@@ -19,6 +19,7 @@ export function Button({
 }: ButtonProps) {
   return (
     <button
+      role="mainButton"
       onClick={onClick}
       className={twMerge(
         "rounded-lg px-4 py-2 border-2 min-h-12",

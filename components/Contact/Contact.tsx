@@ -22,13 +22,20 @@ export function Contact() {
         </Fade>
         <Fade direction="right" triggerOnce className="lg:w-[50%]">
           <div className="mt-12">
-            <h2 className="font-bold text-[24px] text-neutral-300">
+            <h2
+              role="contactHeading"
+              className="font-bold text-[24px] text-neutral-300"
+            >
               Yuk tanya kami!
             </h2>
-            <h3 className="text-neutral-500 text-[32px] mt-4 font-bold">
+            <h3
+              role="contactSubHeading"
+              className="text-neutral-500 text-[32px] mt-4 font-bold"
+            >
               Kirimkan Pertanyaan Anda pada Kami!
             </h3>
             <Image
+              role="contactBg"
               src="/assets/images/contact-us.svg"
               width={612}
               height={408}

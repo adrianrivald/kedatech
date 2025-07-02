@@ -52,21 +52,29 @@ export function Subscribe() {
       )}
     >
       <div className="flex justify-center flex-col gap-2">
-        <h2 className="text-center text-[32px] font-bold">
+        <h2
+          role="subscribeHeading"
+          className="text-center text-[32px] font-bold"
+        >
           Pilihan paket menarik dari kami
         </h2>
-        <p className="text-center w-1/2 mx-auto">
+        <p role="subscribeSubHeading" className="text-center w-1/2 mx-auto">
           Dengan sistem ERP kami, Anda dapat memantau stok barang, transaksi
           harian, dan keuntungan secara real-time — membantu Anda mengambil
           keputusan lebih cepat dan tepat tanpa buang waktu.
         </p>
       </div>
       <div className="mt-12 flex flex-col lg:flex-row items-start  gap-16 backdrop-blur-xl rounded-xl shadows-xl p-4 lg:p-16 relative min-h-[400px] w-[100%] mx-auto space-between">
-        {plans.map((plan) => (
+        {plans.map((plan, index) => (
           <Fade direction="up" triggerOnce className="w-full lg:w-1/3">
-            <div className="bg-white p-8 rounded-[16px] text-neutral-500 border shadow-md min-h-[200px] hover:shadow-lg hover:shadow-blue-500/50 transition-all cursor-pointer">
+            <div className="h-[600px] flex flex-col justify-between gap-8 bg-white p-8 rounded-[16px] text-neutral-500 border shadow-md min-h-[200px] hover:shadow-lg hover:shadow-blue-500/50 transition-all">
               <div className="">
-                <h2 className="text-2xl font-bold">{plan.title}</h2>
+                <h2
+                  role={`planHeading${index + 1}`}
+                  className="text-2xl font-bold"
+                >
+                  {plan.title}
+                </h2>
                 <ol className="mt-8 flex flex-col gap-5">
                   {plan.benefits.map((benefit) => (
                     <li className="flex items-center gap-3">
@@ -79,19 +87,23 @@ export function Subscribe() {
                       {benefit}
                     </li>
                   ))}
-                  {
-                    <div className="mt-2 font-bold">
-                      <span>Rp</span>{" "}
-                      <span className="text-4xl">{plan.price} / bulan</span>
-                    </div>
-                  }
                 </ol>
               </div>
-              <Button
-                title="Langganan sekarang"
-                isPrimary={true}
-                className="w-full mt-8"
-              />
+              <div className="flex flex-col gap-3">
+                <div className="mt-2 font-bold">
+                  <span>Rp</span>{" "}
+                  <span role={`planPrice${index + 1}`} className="text-4xl">
+                    {plan.price} / bulan
+                  </span>
+                </div>
+
+                <Button
+                  role="subscribeButton"
+                  title="Langganan sekarang"
+                  isPrimary={true}
+                  className="w-full mt-8"
+                />
+              </div>
             </div>
           </Fade>
         ))}

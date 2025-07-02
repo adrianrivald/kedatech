@@ -38,6 +38,7 @@ export function ContactForm() {
           Nama
         </label>
         <input
+          role="inputNameField"
           id="name"
           {...register("name", { required: true })}
           type="text"
@@ -69,7 +70,12 @@ export function ContactForm() {
           rows={4}
         />
       </div>
-      <Button isPrimary title="Kirim Pesan" className="lg:w-[250px]" />
+      <Button
+        role="submitButton"
+        isPrimary
+        title="Kirim Pesan"
+        className="lg:w-[250px]"
+      />
     </form>
   );
 }

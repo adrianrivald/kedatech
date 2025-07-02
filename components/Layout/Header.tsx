@@ -28,8 +28,8 @@ function NavMenuMobile({
     >
       <header className="lg:hidden w-full bg-white shadow-md  justify-between border-neutral-300 py-4 flex items-center mx-auto max-w-[100%] px-4">
         {/* Logo */}
-        <div id="logo">
-          <h1>ERP Now</h1>
+        <div className="h-full p-4 bg-gradient-to-b from-sky-300 to-sky-500 rounded-r-full flex items-center pl-8 mr-8">
+          <span className="text-white font-bold text-3xl">ERP Now</span>
         </div>
 
         <Hamburger
@@ -92,19 +92,25 @@ interface NavMenuDesktopProps {
   onClickLogin: () => void;
   onChangeRoute: (route: string) => void;
   routerSection: string;
+  isOpenLoginPopup: boolean;
 }
 
 function NavMenuDesktop({
   onClickLogin,
   onChangeRoute,
   routerSection,
+  isOpenLoginPopup,
 }: NavMenuDesktopProps) {
   return (
-    <div className={`transition-all sticky z-50 top-0`}>
+    <div
+      className={`transition-all sticky ${
+        isOpenLoginPopup ? "z-10" : "z-50"
+      } top-0`}
+    >
       <header className="h-[130px] hidden lg:flex w-full bg-white  justify-between border-neutral-300 py-4 items-center mx-auto max-w-[100%] px-16">
         {/* Logo */}
         {/* Blue pill shape */}
-        <div className="h-full w-[400px] bg-gradient-to-b from-sky-300 to-sky-500 rounded-r-full flex items-center pl-8">
+        <div className="h-full w-[400px] bg-gradient-to-b from-sky-300 to-sky-500 rounded-r-full flex items-center pl-8 mr-8">
           <span className="text-white font-bold text-3xl">ERP Now</span>
         </div>
         <div className="flex items-center gap-16">
@@ -221,6 +227,7 @@ export function Header() {
         routerSection={router.query.section as string}
         onChangeRoute={onChangeRoute}
         onClickLogin={onClickLogin}
+        isOpenLoginPopup={isOpenLoginPopup}
       />
       <NavMenuMobile
         isOpen={isOpen}

@@ -10,10 +10,16 @@ export function Benefit() {
       <div className="mt-48 flex flex-col lg:flex-row justify-between items-center gap-16 relative">
         <Fade direction="left" triggerOnce className=" w-full lg:w-[40%]">
           <div className="flex p-4 lg:ml-36 ml-0 flex-col gap-2 items-start">
-            <h2 className="m-0 text-[30px] lg:text-[32px] lg:text-[40px] font-bold w-full">
+            <h2
+              role="benefit1heading"
+              className="m-0 text-[30px] lg:text-[32px] lg:text-[40px] font-bold w-full"
+            >
               Otomatisasi Pencatatan Barang
             </h2>
-            <p className="mt-4 lg:mt-0 m-0 text-[20px] w-full ">
+            <p
+              role="benefit1desc"
+              className="mt-4 lg:mt-0 m-0 text-[20px] w-full "
+            >
               Tidak perlu lagi mencatat secara manual — semua barang masuk dan
               keluar tercatat otomatis & akurat.
             </p>
@@ -22,6 +28,7 @@ export function Benefit() {
         <Fade direction="right" triggerOnce className=" w-full lg:w-[40%]">
           <div className="p-24 rounded-l-full bg-primary-100">
             <Image
+              role="benefit1img"
               src="/assets/images/benefit-1.svg"
               width={612}
               height={408}
@@ -34,10 +41,16 @@ export function Benefit() {
       <div className="mt-48 flex flex-col lg:flex-row justify-between items-center gap-16 relative">
         <Fade direction="left" triggerOnce className=" w-full lg:w-[40%]">
           <div className="flex p-4 lg:ml-36 ml-0 flex-col gap-2 items-start">
-            <h2 className="m-0 text-[30px] lg:text-[32px] lg:text-[40px] font-bold w-full">
+            <h2
+              role="benefit2heading"
+              className="m-0 text-[30px] lg:text-[32px] lg:text-[40px] font-bold w-full"
+            >
               Pantauan Keuntungan Harian
             </h2>
-            <p className="mt-4 lg:mt-0 m-0 text-[20px] w-full ">
+            <p
+              role="benefit2desc"
+              className="mt-4 lg:mt-0 m-0 text-[20px] w-full "
+            >
               Lihat laporan keuntungan setiap hari secara real-time untuk
               memantau performa bisnis Anda dengan lebih baik.
             </p>
@@ -46,6 +59,7 @@ export function Benefit() {
         <Fade direction="right" triggerOnce className=" w-full lg:w-[40%]">
           <div className="p-24 rounded-l-full bg-primary-100">
             <Image
+              role="benefit2img"
               src="/assets/images/benefit-2.svg"
               width={612}
               height={408}
@@ -58,10 +72,16 @@ export function Benefit() {
       <div className="mt-48 flex flex-col lg:flex-row justify-between items-center gap-16 relative">
         <Fade direction="left" triggerOnce className=" w-full lg:w-[40%]">
           <div className="flex p-4 lg:ml-36 ml-0 flex-col gap-2 items-start">
-            <h2 className="m-0 text-[30px] lg:text-[32px] lg:text-[40px] font-bold w-full">
+            <h2
+              role="benefit3heading"
+              className="m-0 text-[30px] lg:text-[32px] lg:text-[40px] font-bold w-full"
+            >
               Pengambilan Keputusan Lebih Cepat{" "}
             </h2>
-            <p className="mt-4 lg:mt-0 m-0 text-[20px] w-full ">
+            <p
+              role="benefit3desc"
+              className="mt-4 lg:mt-0 m-0 text-[20px] w-full "
+            >
               Dengan data yang tersaji lengkap dan rapi, Anda dapat mengambil
               keputusan strategis tanpa ragu.
             </p>
@@ -70,6 +90,7 @@ export function Benefit() {
         <Fade direction="right" triggerOnce className=" w-full lg:w-[40%]">
           <div className="p-24 rounded-l-full bg-primary-100">
             <Image
+              role="benefit3img"
               src="/assets/images/benefit-3.svg"
               width={648}
               height={282}

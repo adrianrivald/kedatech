@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Benefit snapshot test 1`] = `
+<div
+  className="bg-[url('/assets/images/contact-bg.png')] p-4 lg:p-16 mt-16 lg:mt-24 bg-no-repeat bg-left bg-auto max-w-[100rem] mx-auto"
+  id="contact"
+>
+  <div
+    className="relative flex flex-col-reverse lg:flex-row flex  gap-16 backdrop-blur-lg border border-2 rounded-xl shadow-xl p-4 lg:p-16 relative min-h-[400px] w-[100%] mx-auto"
+  >
+    <div
+      className="w-full lg:w-[50%] css-0"
+      style={
+        {
+          "animationDelay": "0ms",
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        className=""
+        style={{}}
+      >
+        <form
+          className="flex flex-col gap-8"
+          onSubmit={[Function]}
+        >
+          <div
+            className="flex flex-col gap-2"
+          >
+            <label
+              className="text-[14px]"
+              htmlFor="name"
+            >
+              Nama
+            </label>
+            <input
+              className="rounded-md p-4 border border-neutral-100 focus:outline-none"
+              id="name"
+              name="name"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Masukkan nama Anda"
+              role="inputNameField"
+              type="text"
+            />
+          </div>
+          <div
+            className="flex flex-col gap-2"
+          >
+            <label
+              className="text-[14px]"
+              htmlFor="email"
+            >
+              Alamat Email
+            </label>
+            <input
+              className="rounded-md p-4 border border-neutral-100 focus:outline-none"
+              id="email"
+              name="email"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Masukkan alamat email Anda"
+              type="email"
+            />
+          </div>
+          <div
+            className="flex flex-col gap-2"
+          >
+            <label
+              className="text-[14px]"
+              htmlFor="message"
+            >
+              Pesan
+            </label>
+            <textarea
+              className="rounded-md p-4 border border-neutral-100 focus:outline-none"
+              id="message"
+              name="message"
+              onBlur={[Function]}
+              onChange={[Function]}
+              placeholder="Masukkan pesan Anda"
+              rows={4}
+            />
+          </div>
+          <button
+            className="rounded-lg px-4 py-2 border-2 min-h-12 bg-primary-500 border-primary-500 text-white lg:w-[250px]"
+            role="submitButton"
+          >
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
+    </div>
+    <div
+      className="lg:w-[50%] css-0"
+      style={
+        {
+          "animationDelay": "0ms",
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        className="mt-12"
+        style={{}}
+      >
+        <h2
+          className="font-bold text-[24px] text-neutral-300"
+          role="contactHeading"
+        >
+          Yuk tanya kami!
+        </h2>
+        <h3
+          className="text-neutral-500 text-[32px] mt-4 font-bold"
+          role="contactSubHeading"
+        >
+          Kirimkan Pertanyaan Anda pada Kami!
+        </h3>
+        <img
+          alt="contact"
+          className="hidden lg:block absolute right-2 bottom-2 w-1/2"
+          data-nimg="1"
+          decoding="async"
+          height={408}
+          loading="lazy"
+          onError={[Function]}
+          onLoad={[Function]}
+          role="contactBg"
+          src="/assets/images/contact-us.svg"
+          srcSet="/assets/images/contact-us.svg 1x, /assets/images/contact-us.svg 2x"
+          style={
+            {
+              "color": "transparent",
+            }
+          }
+          width={612}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

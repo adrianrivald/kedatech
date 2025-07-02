@@ -27,10 +27,16 @@ export function Hero() {
       {/* Our Words */}
       <Fade direction="left" triggerOnce>
         <div id="our-words" className="lg:px-16 lg:max-w-[40rem]">
-          <h1 className="text-[32px] font-bold text-center lg:text-left">
+          <h1
+            role="heroHeading"
+            className="text-[32px] font-bold text-center lg:text-left"
+          >
             Biar Sistem yang Catat, Anda Fokus Berkembang.
           </h1>
-          <p className="mt-4 text-base text-center lg:text-left">
+          <p
+            role="heroDesc"
+            className="mt-4 text-base text-center lg:text-left"
+          >
             Kelola stok, pantau arus barang, dan catat keuntungan harian secara
             otomatis dalam satu platform. Sistem ERP modern kami dirancang
             khusus untuk membantu pengusaha mengelola operasional bisnis dengan
@@ -38,6 +44,7 @@ export function Hero() {
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-4 mt-8">
             <Button
+              role="heroButton"
               onClick={onConsult}
               title="Konsultasikan"
               isPrimary

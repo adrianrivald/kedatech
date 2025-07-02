@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshot test 1`] = `
+<button
+  className="rounded-lg px-4 py-2 border-2 min-h-12 bg-primary-500 border-primary-500 text-white w-full lg:w-auto"
+  role="mainButton"
+>
+  Test Button
+</button>
+`;
